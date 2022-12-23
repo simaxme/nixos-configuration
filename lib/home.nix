@@ -18,7 +18,12 @@ in
     gtk.enable = true;
     gtk.theme.name = "Dracula";
     gtk.theme.package = pkgs.dracula-theme;
+
     gtk.iconTheme.name = "WhiteSur";
     gtk.iconTheme.package = pkgs.whitesur-icon-theme;
+  
+    gtk.cursorTheme.name = "Bibata-Modern-Classic";
+    gtk.cursorTheme.package = pkgs.bibata-cursors;
+    gtk.cursorTheme.size = 16;
   };
 }

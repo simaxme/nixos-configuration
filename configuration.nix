@@ -113,9 +113,11 @@
 	kitty
 	firefox
 
-	dracula-theme
-	whitesur-icon-theme
+	#dracula-theme
+	#whitesur-icon-theme
 	
+	git
+
 	gitkraken
 	chromium
 	picom

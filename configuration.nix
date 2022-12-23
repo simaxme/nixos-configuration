@@ -35,6 +35,12 @@
     };
   };
 
+  # audio
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.support32Bit = true;    ## If compatibility with 32-bit applications is desired.
+  #nixpkgs.config.pulseaudio = true;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -92,7 +98,7 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" ];
     packages = with pkgs; [];
   };
 
@@ -106,12 +112,20 @@
 	wget
 	kitty
 	firefox
+
+	dracula-theme
+	whitesur-icon-theme
 	
 	gitkraken
 	chromium
+	picom
+	cinnamon.nemo
+
+	pavucontrol
 
 	# awesome
-	# luajitPackages.vicious
+	rofi
+	playerctl
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects
@@ -128,6 +142,7 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+  programs.dconf.enable = true;
 
   # List services that you want to enable:
 

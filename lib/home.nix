@@ -44,6 +44,7 @@ in
 
         categories = [ "Network" "WebBrowser" ];
     };
+    xdg.userDirs.enable = true;
 
     programs.zsh = {
   	enable = true;

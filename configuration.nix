@@ -147,6 +147,7 @@
 	firefox
 
     maim
+    notify-desktop
 	
 	git
 
@@ -182,6 +183,7 @@
 	# awesome
 	rofi
 	playerctl
+    xdg-user-dirs
 
     tdesktop
 

@@ -50,6 +50,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  programs.nm-applet.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -104,6 +105,10 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

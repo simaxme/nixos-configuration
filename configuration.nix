@@ -101,8 +101,9 @@
     description = "Simon";
     extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" ];
     packages = with pkgs; [];
+    shell = pkgs.zsh;
   };
-
+ 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -129,6 +130,10 @@
 	cinnamon.nemo
 
 	pavucontrol
+
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	zsh-powerlevel10k
 
 	# awesome
 	rofi

@@ -142,13 +142,14 @@
 	picom
 	cinnamon.nemo
     gparted
-    #etcher
     inkscape
     gimp
     spotify
     steam
     cura
     discord
+
+    docker
 
     jetbrains.webstorm
     jetbrains.idea-ultimate

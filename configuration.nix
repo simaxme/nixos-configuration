@@ -79,16 +79,23 @@
 
     displayManager = {
     	sddm.enable = true;
-	sddm.theme = "sugar-dark";
-	defaultSession = "none+awesome";
+        sddm.theme = "sugar-dark";
+        defaultSession = "none+awesome";
+    };
+
+    libinput = {
+        enable = true;
+        naturalScrolling = false;
+        middleEmulation = false;
+        tapping = true;
     };
 
     windowManager.awesome = {
-	enable = true;
-	luaModules = with pkgs.luaPackages; [
-		luarocks
-		vicious
-	];
+        enable = true;
+        luaModules = with pkgs.luaPackages; [
+            luarocks
+            vicious
+        ];
     };
   };
 

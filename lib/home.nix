@@ -16,6 +16,9 @@ in
     home.file.".config/awesome".source = ../dotfiles/awesome;
     home.file.".config/rofi".source = ../dotfiles/rofi;
 
+    home.file.".Xresources".source = ../dotfiles/.Xresources;
+    home.file.".ideavimrc".source = ../dotfiles/.ideavimrc;
+
     gtk.enable = true;
     gtk.theme.name = "Dracula";
     gtk.theme.package = pkgs.dracula-theme;

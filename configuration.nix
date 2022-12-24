@@ -35,6 +35,9 @@
     };
   };
 
+  #steam fixes
+  hardware.opengl.driSupport32Bit = true;
+
   # audio
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -81,13 +84,16 @@
     	sddm.enable = true;
         sddm.theme = "sugar-dark";
         defaultSession = "none+awesome";
+        setupCommands = "xrandr --output HDMI-1 --mode 1920x1080 --pos 1920x0 --output DP-0 --mode 1920x1080 --pos 0x0";
     };
 
     libinput = {
         enable = true;
-        naturalScrolling = false;
-        middleEmulation = false;
-        tapping = true;
+        touchpad = {
+            naturalScrolling = false;
+            middleEmulation = false;
+            tapping = true;
+        };
     };
 
     windowManager.awesome = {
@@ -135,6 +141,17 @@
 	chromium
 	picom
 	cinnamon.nemo
+    gparted
+    #etcher
+    inkscape
+    gimp
+    spotify
+    steam
+    cura
+    discord
+
+    jetbrains.webstorm
+    jetbrains.idea-ultimate
 
     nodejs-16_x
     openjdk18-bootstrap

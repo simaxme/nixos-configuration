@@ -37,6 +37,7 @@
 
   #steam fixes
   hardware.opengl.driSupport32Bit = true;
+  hardware.opengl.enable = true;
 
   # audio
   sound.enable = true;
@@ -80,10 +81,15 @@
     layout = "de";
     xkbVariant = "";
 
+    videoDrivers = [ "nvidia" ];
+
+    dpi = 96;
+
     displayManager = {
     	sddm.enable = true;
         sddm.theme = "sugar-dark";
         defaultSession = "none+awesome";
+        
         setupCommands = "xrandr --output HDMI-1 --mode 1920x1080 --pos 1920x0 --output DP-0 --mode 1920x1080 --pos 0x0";
     };
 
@@ -105,6 +111,9 @@
     };
   };
 
+  # nvidia driver
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+
   # Configure console keymap
   console.keyMap = "de";
 
@@ -120,9 +129,14 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
   fonts.fonts = with pkgs; [
     (nerdfonts.override { fonts = [ "CascadiaCode" "JetBrainsMono" "Iosevka" ]; })
   ];
+
+  environment.variables = {
+    GDK_SCALE = "1";
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -131,9 +145,6 @@
 	wget
 	kitty
 	firefox
-
-	#dracula-theme
-	#whitesur-icon-theme
 	
 	git
 
@@ -148,6 +159,9 @@
     steam
     cura
     discord
+
+    bitwarden
+    onlyoffice-bin
 
     docker
 
@@ -174,6 +188,7 @@
     python2
     python39
     unzip
+    xclip
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

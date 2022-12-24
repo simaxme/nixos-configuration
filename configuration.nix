@@ -153,6 +153,7 @@
     gcc
     python2
     python39
+    unzip
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

@@ -30,6 +30,21 @@ in
     gtk.cursorTheme.package = pkgs.bibata-cursors;
     gtk.cursorTheme.size = 16;
 
+    xdg.desktopEntries.discord = {
+        name = "Discord";
+
+        genericName = "Web Browser";
+
+        icon = "discord";
+        exec = "discord --enable-gpu-rasterization";
+
+        terminal = false;
+
+        type = "Application";
+
+        categories = [ "Network" "WebBrowser" ];
+    };
+
     programs.zsh = {
   	enable = true;
   	shellAliases = {

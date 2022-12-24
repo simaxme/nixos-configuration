@@ -166,6 +166,8 @@
 	rofi
 	playerctl
 
+    tdesktop
+
     # required for neovim
     gcc
     python2

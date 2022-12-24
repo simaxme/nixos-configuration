@@ -108,7 +108,7 @@
   nixpkgs.config.allowUnfree = true;
 
   fonts.fonts = with pkgs; [
-    (nerdfonts.override { fonts = [ "CascadiaCode" ]; })
+    (nerdfonts.override { fonts = [ "CascadiaCode" "JetBrainsMono" "Iosevka" ]; })
   ];
 
   # List packages installed in system profile. To search, run:

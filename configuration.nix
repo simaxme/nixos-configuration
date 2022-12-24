@@ -145,6 +145,8 @@
 	wget
 	kitty
 	firefox
+
+    maim
 	
 	git
 
@@ -189,6 +191,7 @@
     python39
     unzip
     xclip
+    ripgrep
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

@@ -11,6 +11,7 @@ in
     home.stateVersion = "22.11";
 
     home.file.".config/kitty".source = ../dotfiles/kitty;
+    home.file.".config/nvim".source = ../dotfiles/nvim;
     home.file.".config/picom".source = ../dotfiles/picom;
     home.file.".config/awesome".source = ../dotfiles/awesome;
     home.file.".config/rofi".source = ../dotfiles/rofi;

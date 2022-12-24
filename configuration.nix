@@ -129,6 +129,9 @@
 	picom
 	cinnamon.nemo
 
+    nodejs-16_x
+    openjdk18-bootstrap
+
 	pavucontrol
 
 	zsh-syntax-highlighting
@@ -138,6 +141,11 @@
 	# awesome
 	rofi
 	playerctl
+
+    # required for neovim
+    gcc
+    python2
+    python39
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

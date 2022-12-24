@@ -26,7 +26,6 @@ in
     gtk.cursorTheme.package = pkgs.bibata-cursors;
     gtk.cursorTheme.size = 16;
 
-
     programs.zsh = {
   	enable = true;
   	shellAliases = {
@@ -58,6 +57,5 @@ in
           }
 	];
     };
-
   };
 }

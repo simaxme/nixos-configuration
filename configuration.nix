@@ -74,6 +74,8 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
+  virtualisation.docker.enable = true;
+
   # Configure keymap in X11
   services.xserver = {
     enable = true;
@@ -160,8 +162,14 @@
     gimp
     spotify
     steam
+    
     cura
+    openscad
+
     discord
+
+    postman
+    termius
 
     bitwarden
     onlyoffice-bin
@@ -170,6 +178,7 @@
 
     jetbrains.webstorm
     jetbrains.idea-ultimate
+    jetbrains.datagrip
 
     nodejs-16_x
     openjdk18-bootstrap

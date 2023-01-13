@@ -170,6 +170,7 @@
 
     postman
     termius
+    mongodb-compass
 
     bitwarden
     onlyoffice-bin
@@ -196,6 +197,10 @@
 
     tdesktop
 
+    # epiphany
+    midori
+
+
     # required for neovim
     gcc
     python2
@@ -203,6 +208,8 @@
     unzip
     xclip
     ripgrep
+    # lsp
+    sumneko-lua-language-server
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

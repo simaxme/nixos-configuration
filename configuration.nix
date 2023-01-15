@@ -156,7 +156,9 @@
 	gitkraken
 	chromium
 	picom
+
 	cinnamon.nemo
+
     gparted
     inkscape
     gimp
@@ -210,6 +212,8 @@
     ripgrep
     # lsp
     sumneko-lua-language-server
+
+    rclone
 
 	# sddm libraries
 	libsForQt5.qt5.qtgraphicaleffects

@@ -4,7 +4,9 @@
 
 { config, pkgs, ... }:
 
-{
+let
+    unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -75,6 +77,7 @@
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.libvirtd.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -123,13 +126,14 @@
   users.users.simon = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" "libvirtd" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.cudaSupport = true;
 
 
   fonts.fonts = with pkgs; [
@@ -142,22 +146,25 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
-	neovim
-	wget
-	kitty
-	firefox
+    neovim
+    wget
+    kitty
+    firefox
 
     maim
     notify-desktop
-	
-	git
+    
+    git
 
-	gitkraken
-	chromium
-	picom
+    gitkraken
+    chromium
+    picom
 
-	cinnamon.nemo
+    bluej
+
+    cinnamon.nemo
 
     gparted
     inkscape
@@ -179,34 +186,49 @@
 
     docker
 
-    jetbrains.webstorm
-    jetbrains.idea-ultimate
-    jetbrains.datagrip
+    unstable.jetbrains.webstorm
+    unstable.jetbrains.idea-ultimate
+    unstable.jetbrains.datagrip
+    unstable.android-studio
+    unstable.android-tools
 
     nodejs-16_x
-    openjdk18-bootstrap
 
-	pavucontrol
+    openjdk18-bootstrap 
 
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	zsh-powerlevel10k
+    pavucontrol
 
-	# awesome
-	rofi
-	playerctl
+    yt-dlp
+
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    zsh-powerlevel10k
+
+    # awesome
+    rofi
+    playerctl
     xdg-user-dirs
 
     tdesktop
 
-    # epiphany
+    teams
+
     midori
+
+    # kvm
+    qemu
+    qemu_kvm
+    libvirt
+    bridge-utils
 
 
     # required for neovim
     gcc
     python2
     python39
+
+    # python39Packages.torch-bin
+
     unzip
     xclip
     ripgrep
@@ -215,12 +237,12 @@
 
     rclone
 
-	# sddm libraries
-	libsForQt5.qt5.qtgraphicaleffects
-	libsForQt5.qt5.qtquickcontrols
+    # sddm libraries
+    libsForQt5.qt5.qtgraphicaleffects
+    libsForQt5.qt5.qtquickcontrols
 
-	# custom packages
-	(import ./pkgs/sddm-theme.nix)
+    # custom packages
+    (import ./pkgs/sddm-theme.nix)
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

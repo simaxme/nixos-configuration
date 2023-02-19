@@ -95,7 +95,7 @@ in {
     layout = "de";
     xkbVariant = "";
 
-#    videoDrivers = [ "nvidia" ];
+   videoDrivers = [ "nvidia" ];
 
     dpi = 96;
 
@@ -126,7 +126,7 @@ in {
   };
 
   # nvidia driver
-  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Configure console keymap
   console.keyMap = "de";
@@ -229,6 +229,7 @@ in {
     qemu_kvm
     libvirt
     bridge-utils
+    virt-manager
 
 
     # required for neovim

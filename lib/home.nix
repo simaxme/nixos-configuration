@@ -44,6 +44,13 @@ in
 
         categories = [ "Network" "WebBrowser" ];
     };
+    xdg.mimeApps = {
+        enable = true;
+        defaultApplications = {
+            "inode/directory"=["nemo.desktop"];
+        };
+
+    };
     xdg.userDirs.enable = true;
 
     programs.zsh = {

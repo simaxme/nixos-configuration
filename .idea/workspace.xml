@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b6581461-af70-40db-b8a2-ced59fd52ccd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/configuration.nix" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.nix" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotfiles" beforeDir="false" afterPath="$PROJECT_DIR$/dotfiles" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotfiles/awesome/themes/dracula/wallpaper" beforeDir="false" afterPath="$PROJECT_DIR$/dotfiles/awesome/themes/dracula/wallpaper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotfiles/nvim" beforeDir="false" afterPath="$PROJECT_DIR$/dotfiles/nvim" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Locn7bPRaOwXc1x7e7RxWIGHyK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/simon/Dokumente/Coding/private/vinwatch"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6581461-af70-40db-b8a2-ced59fd52ccd" name="Changes" comment="" />
+      <created>1676541045582</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676541045582</updated>
+      <workItem from="1676541050645" duration="15000" />
+    </task>
+    <servers />
+  </component>
+</project>

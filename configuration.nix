@@ -20,20 +20,29 @@ in {
   # Bootloader.
 
   boot = {
+    kernelParams = ["quiet"];
+
     cleanTmpDir = true;
+
+    initrd.systemd.enable = true;
+
+    plymouth = {
+        enable = true;
+        theme = "breeze";
+    };
 
     loader = {
     	efi = {
-	    canTouchEfiVariables = true;
-	    efiSysMountPoint = "/boot/efi";
-	};
+            canTouchEfiVariables = true;
+            efiSysMountPoint = "/boot/efi";
+        };
     	grub = {
             enable = true;
             version = 2;
             useOSProber = true;
             device = "nodev";
-	    efiSupport = true;
-	};
+            efiSupport = true;
+        };
     };
   };
 
@@ -86,7 +95,7 @@ in {
     layout = "de";
     xkbVariant = "";
 
-    videoDrivers = [ "nvidia" ];
+#    videoDrivers = [ "nvidia" ];
 
     dpi = 96;
 
@@ -117,7 +126,7 @@ in {
   };
 
   # nvidia driver
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Configure console keymap
   console.keyMap = "de";

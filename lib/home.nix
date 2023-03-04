@@ -15,6 +15,7 @@ in
     home.file.".config/picom".source = ../dotfiles/picom;
     home.file.".config/awesome".source = ../dotfiles/awesome;
     home.file.".config/rofi".source = ../dotfiles/rofi;
+    home.file.".config/tmux".source = ../dotfiles/tmux;
 
     home.file.".Xresources".source = ../dotfiles/.Xresources;
     home.file.".ideavimrc".source = ../dotfiles/.ideavimrc;

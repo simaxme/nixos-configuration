@@ -26,11 +26,6 @@ in {
 
     initrd.systemd.enable = true;
 
-    plymouth = {
-        enable = true;
-        theme = "breeze";
-    };
-
     loader = {
     	efi = {
             canTouchEfiVariables = true;
@@ -87,6 +82,7 @@ in {
   };
 
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
   virtualisation.libvirtd.enable = true;
 
   # Configure keymap in X11
@@ -136,7 +132,7 @@ in {
   users.users.simon = {
     isNormalUser = true;
     description = "Simon";
-    extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "sound" "video" "libvirtd" "user-with-access-to-virtualbox" "vboxusers" ];
     packages = with pkgs; [];
     shell = pkgs.zsh;
   };
@@ -159,6 +155,10 @@ in {
 
   environment.systemPackages = with pkgs; [
     neovim
+    tmux
+
+    htop
+
     wget
     kitty
     firefox
@@ -181,6 +181,7 @@ in {
     gimp
     spotify
     steam
+    minecraft
     
     cura
     openscad
@@ -232,6 +233,9 @@ in {
     bridge-utils
     virt-manager
 
+    anydesk
+
+    codespell
 
     # required for neovim
     gcc
@@ -274,7 +278,7 @@ in {
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
